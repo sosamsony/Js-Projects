@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins&display=swap');
+.image-generator{
+    text-align: center;
+    font-family: 'Poppins';
+    margin-top: 5rem;
+    height: 100vh;
+    
+}
+body {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #34495e;
+}
+.title{
+    color: #e24d4c;
+}
+.image-generator img{
+    border: 2px solid #0abf30;
+    height: auto;
+    max-width: 100%;
+    /* padding-left: 20rem; */
+    object-fit: cover;
+    background-size: cover;
+}
+.btn{
+    
+    border: none;
+    outline: none;
+    color: #3498db;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #0abf30;
+    color: white;
+}

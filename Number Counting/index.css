@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --dark: #34495e;
+    --light: #fff;
+    --success: #0abf30;
+    --error: #e24d4c;
+    --warning: #e9bd0c;
+    --info: #3498db;
+}
+body{
+    background: #121317;
+}
+.main {
+    /* border: 1px solid wheat; */
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    justify-content: space-around;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 8px solid #e24d4c
+}
+i {
+    color: #0abf30;
+    font-size: 2rem;
+}
+.container .num {
+    color: #fff;
+    font-size: 2rem;
+}
+.container .text {
+    color: #3498db;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+    .main {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,38 @@
+body {
+    background: #E4FDE1;
+}
+.accordion {
+    width: 550px;
+    border: 1px solid;
+    margin: 50px auto;
+    padding: 10px;
+}
+.question {
+    font-size: 20px;
+}
+.item {
+    background: #8ACB88;
+    color: #575761;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: all 1.5s;
+}
+.question-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: all 1.5s;
+}
+.answer {
+    padding: 0 5px;
+    line-height: 1.5rem;
+    margin: 0;
+    display: none;
+    transition: all 1.5s;
+}
+.accordion .item .active {
+    display: block;
+}

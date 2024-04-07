@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Quotes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .quote-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .character-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .anime-name {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .quote-text {
+            font-size: 16px;
+            color: #444;
+        }
+
+        button {
+            margin-top: 1rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        <div class="character-name">Spike Spiegel</div>
+        <div class="anime-name">Cowboy Bebop</div>
+        <div class="quote-text">I'm not going there to die. I'm going to find out if I'm really alive.</div>
+        <button id="btn">Generate Quote</button>
+    </div>
+    <div class="test"></div>
+    <script>
+        const characterName = document.querySelector('.character-name');
+        const animeName = document.querySelector('.anime-name');
+        const quote = document.querySelector('.quote-text');
+        let url = 'https://animechan.xyz/api/random';
+
+        const button = document.getElementById('btn').addEventListener("click", () => {
+            generateQuote();
+        })
+
+        async function generateQuote() {
+            let response = await fetch(url);
+            let data = await response.json();
+            console.log(data);
+            animeName.innerText = data.anime;
+            characterName.innerText = data.character;
+            quote.innerText = data.quote;
+        }
+
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
